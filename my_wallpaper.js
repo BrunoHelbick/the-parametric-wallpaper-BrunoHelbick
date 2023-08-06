@@ -21,31 +21,17 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   rect(40 ,40, rect_width, rect_height);
   noStroke();
-  // fill(255, 185, 254  ); // Light Pink
-  let fillNum = 255;
-  let rand = random(0,3);
-  if(rand>1){
-    fillNum = 255;
-  }
+  fill(0);
+  rect(0, 0,200,200);
   rect(200,0,200,200);
   var a = 40;
-  quad();
-//   for (let i = 0; i < screenWidth; i += 400) {
-//     for (let j = 0; j < screenHeight; j += 200) {
-//         draw_ellipses(i, j);
-//     }
-// }
-
-// for (let i = 200; i < screenWidth; i += 400) {
-//     for (let j = 0; j < screenHeight; j += 200) {
-//         draw_ellipses2(i, j);
-//     }
-// }
   
-  draw_ellipses(0,0,fillNum);
-  draw_ellipses2(200,0,fillNum);
-// stroke(1);
 
+  
+  draw_ellipses(0,0);
+  draw_ellipses2(200,0);
+  
+// stroke(1);
 // ellipse(100,100,180,200);
 // fill(random(0,255),random(0,255),random(0,255));
 // strokeWeight(10);
@@ -67,80 +53,49 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 // triangle(40,40,80,55,45,55);
 
 } 
-
-function draw_ellipses(numX,numY,fillNum) {
-  fill(fillNum);
-  rect(numX, numY,200,200);
+function draw_ellipses(numX,numY) {
+ 
   for (let i = 2.5; i < 42; i = i + 5) {
-   for (let a = 2.5; a < 42; a = a + 5) {
-     let d = random(10, 25);
-     let gradient = i / 42.0; 
-     var e = lerp(10, 255, gradient);
-     var f = lerp(0, 100, gradient);  
-     var g = lerp(200, 255, gradient);
-     var alpha = random(100, 200); 
-     
-     fill(e, f, g, alpha);
-     ellipse(numX + 5 * i, numY + 5 * a, d, d);
-   }
- }
- for (let i = 2.5; i < 42; i = i + 5) {
-  for (let a = 2.5; a < 42; a = a + 5) {
-    let d = random(10, 25);
-    let gradient = i / 42.0; 
-    var e = lerp(10, 255, gradient);
-    var f = lerp(0, 100, gradient); 
-    var g = lerp(200, 255, gradient); 
-    var alpha = random(100, 200);
-    
-    fill(e, f, g, alpha); 
-    ellipse(numX + 5 * i, numY + 5 * a, d, d);
+    for (let a = 2.5; a < 42; a = a + 5) {
+      let d = random(10, 25);
+      let gradient = (abs(i - 21.25) + abs(a - 21.25)) / (42 + 42); 
+      var e = 0; 
+      var f = lerp(255, 0, gradient);
+      var g = 0;
+      var alpha = random(100, 200); 
+      fill(e, f, g, alpha);
+      ellipse(numX + 5 * i, numY + 5 * a, d, d);
+    }
   }
-}
-stroke(50);
-strokeWeight(3);
-for (let i = 2.5; i < 42; i = i + 5) {
-  for (let a = 2.5; a < 42; a = a + 5) {
-    line(numX + 5 * i,numY,numX + 5 * i,numY+200);
-
-  }}
+  stroke(50);
+  strokeWeight(3);
+  for (let i = 2.5; i < 42; i = i + 5) {
+    for (let a = 2.5; a < 42; a = a + 5) {
+      line(numX + 5 * i,numY,numX + 5 * i,numY+200);
+    }}
   strokeWeight(0);
 }
-function draw_ellipses2(numX,numY,fillNum) {
-  fill(fillNum);
-  rect(numX, numY,200,200);
-  for (let i = 2.5; i < 42; i = i + 5) {
-   for (let a = 2.5; a < 42; a = a + 5) {
-     let d = random(10, 25);
-     let gradient = 1 - (i / 42.0); 
-     var e = lerp(10, 255, gradient); 
-     var f = lerp(0, 100, gradient); 
-     var g = lerp(200, 255, gradient); 
-     var alpha = random(100, 200); 
-     
-     fill(e, f, g, alpha); 
-     ellipse(numX + 5 * i, numY + 5 * a, d, d);
-   }
- }
- for (let i = 2.5; i < 42; i = i + 5) {
-  for (let a = 2.5; a < 42; a = a + 5) {
-    let d = random(10, 25);
-    let gradient = 1 - (i / 42.0); 
-    var e = lerp(10, 255, gradient);
-    var f = lerp(0, 100, gradient);  
-    var g = lerp(200, 255, gradient);
-    var alpha = random(100, 200); 
-    
-    fill(e, f, g, alpha); 
-    ellipse(numX + 5 * i, numY + 5 * a, d, d);
-  }
-}
-stroke(50);
-strokeWeight(3);
-for (let i = 2.5; i < 42; i = i + 5) {
-  for (let a = 2.5; a < 42; a = a + 5) {
-    line(numX + 5 * i,numY,numX + 5 * i,numY+200);
 
-  }}
+
+function draw_ellipses2(numX,numY) {
+  
+  for (let i = 2.5; i < 42; i = i + 5) {
+    for (let a = 2.5; a < 42; a = a + 5) {
+      let d = random(10, 25);
+      let gradient = (abs(i - 21.25) + abs(a - 21.25)) / (42 + 42); 
+      var e = 0; 
+      var f = lerp(255, 0, gradient);
+      var g = 0;
+      var alpha = random(100, 200); 
+      fill(e, f, g, alpha);
+      ellipse(numX + 5 * i, numY + 5 * a, d, d);
+    }
+  }
+  stroke(50);
+  strokeWeight(3);
+  for (let i = 2.5; i < 42; i = i + 5) {
+    for (let a = 2.5; a < 42; a = a + 5) {
+      line(numX + 5 * i,numY,numX + 5 * i,numY+200);
+    }}
   strokeWeight(0);
 }
