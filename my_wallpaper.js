@@ -11,7 +11,7 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 400;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 20;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
@@ -22,8 +22,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rect(40 ,40, rect_width, rect_height);
   noStroke();
   // fill(255, 185, 254  ); // Light Pink
-  fill(0);
-  
+  let fillNum = 255;
+  let rand = random(0,3);
+  if(rand>1){
+    fillNum = 255;
+  }
   rect(200,0,200,200);
   var a = 40;
   quad();
@@ -39,8 +42,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //     }
 // }
   
-  draw_ellipses(0,0);
-  draw_ellipses2(200,0);
+  draw_ellipses(0,0,fillNum);
+  draw_ellipses2(200,0,fillNum);
 // stroke(1);
 
 // ellipse(100,100,180,200);
@@ -65,8 +68,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 } 
 
-function draw_ellipses(numX,numY) {
-  fill(0);
+function draw_ellipses(numX,numY,fillNum) {
+  fill(fillNum);
   rect(numX, numY,200,200);
   for (let i = 2.5; i < 42; i = i + 5) {
    for (let a = 2.5; a < 42; a = a + 5) {
@@ -103,8 +106,8 @@ for (let i = 2.5; i < 42; i = i + 5) {
   }}
   strokeWeight(0);
 }
-function draw_ellipses2(numX,numY) {
-  fill(0);
+function draw_ellipses2(numX,numY,fillNum) {
+  fill(fillNum);
   rect(numX, numY,200,200);
   for (let i = 2.5; i < 42; i = i + 5) {
    for (let a = 2.5; a < 42; a = a + 5) {
