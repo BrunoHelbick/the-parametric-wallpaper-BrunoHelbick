@@ -54,7 +54,7 @@ function setup_wallpaper(pWallpaper) {
 
 /////////////////////////////////
 
-Wallpaper 2:
+Wallpaper 3:
 
 //your parameter variables go here!
 let rect_width  = 10;
@@ -76,3 +76,26 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.row_offset  = 0;
 }
 
+/////////////////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+let rect_width  = 10;
+let rect_height = 10;
+let paramter1 = 250;
+let paramter2 = 240;
+let paramter3 = 20; 
+let paramter4 = 160; 
+let paramter5 = 60;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
