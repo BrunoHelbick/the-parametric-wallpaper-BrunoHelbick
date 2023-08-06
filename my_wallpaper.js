@@ -1,7 +1,11 @@
 //your parameter variables go here!
-let rect_width  = 20; // does this show up online 
+let rect_width  = 20; // does this show up online
 let rect_height = 20;
-
+let paramter1 = 0;
+let paramter2 = 255;
+let paramter3 = 0; 
+let paramter4 = 0; 
+let paramter5 = 30;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -59,9 +63,9 @@ function draw_ellipses(numX,numY) {
     for (let a = 2.5; a < 42; a = a + 5) {
       let d = random(10, 25);
       let gradient = (abs(i - 21.25) + abs(a - 21.25)) / (42 + 42); 
-      var e = 0; 
-      var f = lerp(255, 0, gradient);
-      var g = 0;
+      var e = paramter1; 
+      var f = lerp(paramter2, paramter3, gradient);
+      var g = paramter4;
       var alpha = random(100, 200); 
       fill(e, f, g, alpha);
       ellipse(numX + 5 * i, numY + 5 * a, d, d);
@@ -83,9 +87,9 @@ function draw_ellipses2(numX,numY) {
     for (let a = 2.5; a < 42; a = a + 5) {
       let d = random(10, 25);
       let gradient = (abs(i - 21.25) + abs(a - 21.25)) / (42 + 42); 
-      var e = 0; 
-      var f = lerp(255, 0, gradient);
-      var g = 0;
+      var e = paramter1; 
+      var f = lerp(paramter2, paramter3, gradient);
+      var g = paramter4;
       var alpha = random(100, 200); 
       fill(e, f, g, alpha);
       ellipse(numX + 5 * i, numY + 5 * a, d, d);
