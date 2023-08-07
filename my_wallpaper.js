@@ -1,16 +1,16 @@
 //your parameter variables go here!
 let rect_width  = 20; // does this show up online
 let rect_height = 20;
-let paramter1 = 240; 
-let paramter2 = 100;   
-let paramter3 = 150;   
-let paramter4 = 40;
-let paramter5 = 0;
+let paramter1 = 255; 
+let paramter2 = 0;   
+let paramter3 = 255;   
+let paramter4 = 0;
+let paramter5 = 255;
 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings

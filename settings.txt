@@ -149,7 +149,7 @@ function setup_wallpaper(pWallpaper) {
 
 /////////////////////////////////
 
-Wallpaper 7:
+FinalSubmission 7:
 
 //your parameter variables go here!
 let rect_width  = 10;
@@ -162,7 +162,7 @@ let paramter5 = 255;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
