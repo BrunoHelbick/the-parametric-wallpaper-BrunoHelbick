@@ -69,13 +69,15 @@ function draw_ellipses(numX,numY) {
       var g = lerp(paramter4, paramter3, gradient);
       var alpha = random(100, 200); 
       fill(e, f, g, alpha);
-      ellipse(numX + 5 * i, numY + 5 * a, d, d);
+      if(fill!=0){
+      ellipse(numX + 5 * i, numY + 5 * a, d, d);}
     }
   }
   stroke(50);
   strokeWeight(3);
   for (let i = 2.5; i < 42; i = i + 5) {
     for (let a = 2.5; a < 42; a = a + 5) {
+
       line(numX + 5 * i,numY,numX + 5 * i,numY+200);
     }}
   strokeWeight(0);
